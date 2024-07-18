@@ -164,7 +164,10 @@ void PatientManagmentWindow::on_pushButtonSubmit_clicked()
             currentPatient->appointments.remove(selectedItem.section(" - ", 0, 0)); // Remove slot from appointments map
             //currentPatient.appointments.remove(selectedItem);
             ui->comboBoxCancel->removeItem(currentIndex); // Remove item from ComboBox#
+
         }
+        ui->comboBoxCancel->setVisible(false);
+        ui->pushButtonSubmit->setVisible(false);
     }
 
     if (ui->comboBoxReschedule->isVisible()) {

@@ -99,8 +99,14 @@
      <height>24</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Script MT Bold</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
    <property name="text">
-    <string>back</string>
+    <string>Back</string>
    </property>
   </widget>
  </widget>

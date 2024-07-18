@@ -173,60 +173,8 @@ void BookAppointmentWindow::on_pushButtonSubmit_clicked()     ///not handeled ye
     if(currentItem){
         selectedSlot = currentItem->text();
     }
-//     QString selectedSpecialty;
 
-//     if (ui->radioButton_Nutrition->isChecked()) {
-//         selectedSpecialty = "Nutrition";
-//     } else if (ui->radioButton_OG->isChecked()) {
-//         selectedSpecialty = "OG";
-//     } else if (ui->radioButton_Ophthalmology->isChecked()) {
-//         selectedSpecialty = "Ophthalmology";
-//     } else if (ui->radioButton_internalmedicine->isChecked()) {
-//         selectedSpecialty = "Internal Medicine";
-//     } else if (ui->radioButton_Dermatology->isChecked()) {
-//         selectedSpecialty = "Dermatology";
-//     }
 
-// //we still need to push_back(currpat.name) to the selected dr vector for the patientschedule only (the only remaining part in the patient part)
-//     if (selectedSpecialty == "Nutrition") {
-
-//         for (int i = 0; i < Nutrition.size(); i++) {
-//             if (selectedSlot.contains(Nutrition[i].username))
-//             {
-//                 Nutrition[i].dpatients.push_back(currpat->username);
-//                 break;
-//             }
-//         }
-//    }
-//      else if (selectedSpecialty == "OG") {
-//         for (int i = 0; i < OG.size(); i++) {
-//             if (selectedSlot.contains(OG[i].username)) {
-//                 OG[i].dpatients.push_back(currpat->username);
-//                 break;
-//             }
-//         }
-//     } else if (selectedSpecialty == "Ophthalmology") {
-//         for (int i = 0; i < oph.size(); i++) {
-//             if (selectedSlot.contains(oph[i].username)) {
-//                 oph[i].dpatients.push_back(currpat->username);
-//                 break;
-//             }
-//         }
-//     } else if (selectedSpecialty == "Internal Medicine") {
-//         for (int i = 0; i < IM.size(); i++) {
-//             if (selectedSlot.contains(IM[i].username)) {
-//                 IM[i].dpatients.push_back(currpat->username);
-//                 break;
-//             }
-//         }
-//     } else if (selectedSpecialty == "Dermatology") {
-//         for (int i = 0; i < Derm.size(); i++) {
-//             if (selectedSlot.contains(Derm[i].username)) {
-//                 Derm[i].dpatients.push_back(currpat->username);
-//                 break;
-//             }
-//         }
-//     }
     else{
         qDebug() << "No item selected in slotsListView.";
         ui->labelERROR->setVisible(true);
@@ -238,32 +186,4 @@ void BookAppointmentWindow::on_pushButtonSubmit_clicked()     ///not handeled ye
     win->show();
     }
 }
-// drclass* BookAppointmentWindow::findDoctorByUsername(const QString& username)
-// {
-//     for (auto& doc : Nutrition) {
-//         if (doc.username == username) {
-//             return &doc;
-//         }
-//     }
-//     for (auto& doc : OG) {
-//         if (doc.username == username) {
-//             return &doc;
-//         }
-//     }
-//     for (auto& doc : oph) {
-//         if (doc.username == username) {
-//             return &doc;
-//         }
-//     }
-//     for (auto& doc : IM) {
-//         if (doc.username == username) {
-//             return &doc;
-//         }
-//     }
-//     for (auto& doc : Derm) {
-//         if (doc.username == username) {
-//             return &doc;
-//         }
-//     }
-//     return nullptr;
-// }
+
