@@ -27,6 +27,8 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_pushButton_editschedule_clicked();
+
 private:
     Ui::doctor *ui;
     drclass* currdoc;

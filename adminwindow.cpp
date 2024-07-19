@@ -63,7 +63,7 @@ void adminwindow::on_submit_clicked()
             if (nurses[i].username==ui->nursebox->currentText())
             {
                 hide();
-                nursewindow* win=new nursewindow(this,nurses[i]);
+                nursewindow* win=new nursewindow(this,nurses[i].username);
                 win->show();
             }
     }

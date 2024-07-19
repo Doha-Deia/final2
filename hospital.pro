@@ -24,6 +24,7 @@ SOURCES += \
     patientmanagmentwindow.cpp \
     registering.cpp \
     rescheduleappointmentwindow.cpp \
+    scheduleedit.cpp \
     users.cpp
 
 HEADERS += \
@@ -41,6 +42,7 @@ HEADERS += \
     patientmanagmentwindow.h \
     registering.h \
     rescheduleappointmentwindow.h \
+    scheduleedit.h \
     users.h
 
 FORMS += \
@@ -53,7 +55,8 @@ FORMS += \
     nursewindow.ui \
     patientmanagmentwindow.ui \
     registering.ui \
-    rescheduleappointmentwindow.ui
+    rescheduleappointmentwindow.ui \
+    scheduleedit.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

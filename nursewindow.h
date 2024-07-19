@@ -13,7 +13,7 @@ class nursewindow : public QDialog
     Q_OBJECT
 
 public:
-    explicit nursewindow(QWidget *parent = nullptr,nurse n=nurse());
+    explicit nursewindow(QWidget *parent = nullptr,QString n ="");
     ~nursewindow();
     QString getAssignmentString(nurse& nuu);
 
@@ -26,9 +26,11 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_pushButton_editschedule_clicked();
+
 private:
     Ui::nursewindow *ui;
-    nurse nur;
+    nurse *nur;
 };
 
 #endif // NURSEWINDOW_H

@@ -167,7 +167,7 @@ void MainWindow::on_pushButtonLogin_clicked()
         if (nurses[i].username==ui->lineEditUsername->text() && nurses[i].pass==ui->lineEditPassword->text())
         {
             hide();
-            nursewindow* add=new nursewindow(this,nurses[i]);
+            nursewindow* add=new nursewindow(this,nurses[i].username);
             add->show();
             return;
 

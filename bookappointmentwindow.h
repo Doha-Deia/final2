@@ -4,6 +4,7 @@
 #include "qlistwidget.h"
 #include <QDialog>
 #include "patient.h"
+#include "doctor.h"
 namespace Ui {
 class BookAppointmentWindow;
 }

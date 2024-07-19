@@ -9,7 +9,7 @@
 #include "drclass.h"
 #include "doctor.h"
 #include <QDebug>
-
+#include "scheduleedit.h"
 
 BookAppointmentWindow::BookAppointmentWindow(QWidget *parent,QString patname)
     : QDialog(parent)

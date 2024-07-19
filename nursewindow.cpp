@@ -9,14 +9,21 @@
 #include <QPixmap>
 #include "MainWindow.h"
 #include "users.h"
+#include "scheduleedit.h"
 
-nursewindow::nursewindow(QWidget *parent,nurse n)
+nursewindow::nursewindow(QWidget *parent,QString n)
     : QDialog(parent)
     , ui(new Ui::nursewindow)
 {
     ui->setupUi(this);
-    nur =n;
-    ui->label_Hellonur->setText("Hello Dr. "+ nur.username);
+    for (int i=0;i<nurses.size();i++)
+    {
+        if (nurses[i].username==n){
+            nur=&nurses[i];
+            break;
+        }
+    }
+    ui->label_Hellonur->setText("Hello Dr. "+ nur->username);
     QPixmap backgroundImage(":/Images/download.jpg");
 
     // Set the background image
@@ -34,9 +41,9 @@ nursewindow::~nursewindow()
 
 void nursewindow::on_pushButton_profile_clicked()
 {
-    QMessageBox::information(this, tr("profile"), "Name: "+ nur.username + "\nGender: "+nur.gender +
-                                                      "\nAge: "+ QString::number(nur.age) + "\nWorking day: "+ nur.days.join(", ") + "time from: "+ QString::number(nur.starttime)
-                                                      + " to "+ QString::number(nur.endtime));
+    QMessageBox::information(this, tr("profile"), "Name: "+ nur->username + "\nGender: "+nur->gender +
+                                                      "\nAge: "+ QString::number(nur->age) + "\nWorking day: "+ nur->days.join(", ") + "time from: "+ QString::number(nur->starttime)
+                                                      + " to "+ QString::number(nur->endtime));
 }
 
 
@@ -56,9 +63,9 @@ QString nursewindow::getAssignmentString(nurse& nuu)
 void nursewindow::on_pushButton_Schedule_clicked()
 {
     QString scheduleText;
-    for (const auto& day : nur.days)
+    for (const auto& day : nur->days)
     {
-        scheduleText += day + " - " + QString::number(nur.starttime) + ":00 to " + QString::number(nur.endtime) + ":00\n";
+        scheduleText += day + " - " + QString::number(nur->starttime) + ":00 to " + QString::number(nur->endtime) + ":00\n";
     }
     // for (const auto& patient : nur.patients)
     // {
@@ -77,7 +84,7 @@ void nursewindow::on_pushButton_Assignment_clicked()
         bool match = false;
         for (int i=0;i<doctors.size();i++){
 
-            if (doctors[i].starttime==nur.starttime) {
+            if (doctors[i].starttime==nur->starttime && doctors[i].days == nur->days) {
                 drname += "You will work with Dr. " + doctors[i].username + "\n";
                 match = true;
                 break; // Break out of the inner loop once a match is found
@@ -97,5 +104,13 @@ void nursewindow::on_pushButton_clicked()
     hide();
     MainWindow* win=new MainWindow(this);
     win->show();
+}
+
+
+void nursewindow::on_pushButton_editschedule_clicked()
+{
+    hide();
+    scheduleedit* edit = new scheduleedit(this, nur->username);
+    edit->show();
 }
 

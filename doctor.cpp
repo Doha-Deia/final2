@@ -1,12 +1,12 @@
 #include "doctor.h"
 #include "ui_doctor.h"
 #include "drclass.h"
-#include "drclass.cpp"
 #include <QFile>
 #include <QMessageBox>
 #include <QString>
 #include "MainWindow.h"
 #include "users.h"
+#include "scheduleedit.h"
 
 doctor::doctor(QWidget *parent, QString docname)
     : QDialog(parent)
@@ -106,10 +106,10 @@ void doctor::on_pushButton_schedule_clicked()
     {
         scheduleText += day + " - " + QString::number(currdoc->starttime) + ":00 to " + QString::number(currdoc->endtime) + ":00\n";
     }
-    for (const auto& patient : currdoc->dpatients)
-    {
-        scheduleText += patient + "\n";
-    }
+    // for (const auto& patient : currdoc->dpatients)
+    // {
+    //     scheduleText += patient + "\n";
+    // }
     QMessageBox::information(this, tr("Schedule"), scheduleText);
 }
 
@@ -119,5 +119,13 @@ void doctor::on_pushButton_clicked()
     hide();
     MainWindow* win=new MainWindow(this);
     win->show();
+}
+
+
+void doctor::on_pushButton_editschedule_clicked()
+{
+    hide();
+    scheduleedit* edit = new scheduleedit(this, currdoc->username);
+    edit->show();
 }
 

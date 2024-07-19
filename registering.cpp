@@ -3,6 +3,7 @@
 #include "users.h"
 #include "mainwindow.h"
 #include "patient.h"
+#include "drclass.h"
 
 registering::registering(QWidget *parent)
     : QDialog(parent)
