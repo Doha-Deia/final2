@@ -168,6 +168,7 @@ void PatientManagmentWindow::on_pushButtonSubmit_clicked()
         }
         ui->comboBoxCancel->setVisible(false);
         ui->pushButtonSubmit->setVisible(false);
+        ui->pushButtonReschedule->setEnabled(true);
     }
 
     if (ui->comboBoxReschedule->isVisible()) {
@@ -183,6 +184,9 @@ void PatientManagmentWindow::on_pushButtonSubmit_clicked()
 
         }
     }
+      ui->pushButtonCancel->setEnabled(true);
+       ui->comboBoxReschedule->setVisible(false);
+
 }
 
 
