@@ -44,11 +44,11 @@ MainWindow::MainWindow(QWidget *parent)
             bool found=false;
             for (int j=0;j<Nutrition.size();j++)
             {
-                if (doctors[i].username==Nutrition[j].username)
+                if (doctors[i].username==Nutrition[j]->username)
                     found=true;
             }
             if (!found)
-                Nutrition.push_back(doctors[i]);
+                Nutrition.push_back(&doctors[i]);
 
 
         }
@@ -57,11 +57,11 @@ MainWindow::MainWindow(QWidget *parent)
             bool found=false;
             for (int j=0;j<OG.size();j++)
             {
-                if (doctors[i].username==OG[j].username)
+                if (doctors[i].username==OG[j]->username)
                     found =true;
             }
             if (!found)
-                OG.push_back(doctors[i]);
+                OG.push_back(&doctors[i]);
 
 
         }
@@ -70,22 +70,22 @@ MainWindow::MainWindow(QWidget *parent)
             bool found=false;
             for (int j=0;j<IM.size();j++)
             {
-                if (doctors[i].username==IM[j].username)
+                if (doctors[i].username==IM[j]->username)
                     found=true;
             }
             if (!found)
-                IM.push_back(doctors[i]);
+                IM.push_back(&doctors[i]);
         }
         else if (doctors[i].specialization=="Dermatology")
         {
             bool found=false;
             for (int j=0;j<Derm.size();j++)
             {
-                if (doctors[i].username==Derm[j].username)
+                if (doctors[i].username==Derm[j]->username)
                     found=true;
             }
             if (!found)
-                Derm.push_back(doctors[i]);
+                Derm.push_back(&doctors[i]);
 
         }
         else if (doctors[i].specialization=="Ophthalmology")
@@ -93,11 +93,11 @@ MainWindow::MainWindow(QWidget *parent)
             bool found=false;
             for (int j=0;j<oph.size();j++)
             {
-                if (doctors[i].username==oph[j].username)
+                if (doctors[i].username==oph[j]->username)
                     found=true;
             }
             if (!found)
-                oph.push_back(doctors[i]);
+                oph.push_back(&doctors[i]);
 
         }
 

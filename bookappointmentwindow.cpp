@@ -70,9 +70,9 @@ void BookAppointmentWindow::on_radioButton_Nutrition_clicked()
     clearSlotsList();
    for (int i=0;i<Nutrition.size();i++)
    {
-       for (int j=0;j<Nutrition[i].days.size();j++)
+        for (int j=0;j<Nutrition[i]->days.size();j++)
        {
-           addSlotToList(Nutrition[i].username+" on "+Nutrition[i].days[j]+" from "+QString::number(Nutrition[i].starttime)+" to "+QString::number(Nutrition[i].endtime));
+           addSlotToList(Nutrition[i]->username+" on "+Nutrition[i]->days[j]+" from "+QString::number(Nutrition[i]->starttime)+" to "+QString::number(Nutrition[i]->endtime));
        }
    }
 }
@@ -84,9 +84,9 @@ void BookAppointmentWindow::on_radioButton_OG_clicked()
     clearSlotsList();
     for (int i=0;i<OG.size();i++)
     {
-        for (int j=0;j<OG[i].days.size();j++)
+        for (int j=0;j<OG[i]->days.size();j++)
         {
-            addSlotToList(OG[i].username+" on "+OG[i].days[j]+" from "+QString::number(OG[i].starttime)+" to "+QString::number(OG[i].endtime));
+            addSlotToList(OG[i]->username+" on "+OG[i]->days[j]+" from "+QString::number(OG[i]->starttime)+" to "+QString::number(OG[i]->endtime));
         }
     }
 }
@@ -98,9 +98,9 @@ void BookAppointmentWindow::on_radioButton_Ophthalmology_clicked()
     clearSlotsList();
     for (int i=0;i<oph.size();i++)
     {
-        for (int j=0;j<oph[i].days.size();j++)
+        for (int j=0;j<oph[i]->days.size();j++)
         {
-            addSlotToList(oph[i].username+" on "+oph[i].days[j]+" from "+QString::number(oph[i].starttime)+" to "+QString::number(oph[i].endtime));
+            addSlotToList(oph[i]->username+" on "+oph[i]->days[j]+" from "+QString::number(oph[i]->starttime)+" to "+QString::number(oph[i]->endtime));
         }
     }
 }
@@ -112,9 +112,9 @@ void BookAppointmentWindow::on_radioButton_internalmedicine_clicked()
     clearSlotsList();
     for (int i=0;i<IM.size();i++)
     {
-        for (int j=0;j<IM[i].days.size();j++)
+        for (int j=0;j<IM[i]->days.size();j++)
         {
-            addSlotToList(IM[i].username+" on "+IM[i].days[j]+" from "+QString::number(IM[i].starttime)+" to "+QString::number(IM[i].endtime));
+            addSlotToList(IM[i]->username+" on "+IM[i]->days[j]+" from "+QString::number(IM[i]->starttime)+" to "+QString::number(IM[i]->endtime));
         }
     }
 }
@@ -126,9 +126,9 @@ void BookAppointmentWindow::on_radioButton_Dermatology_clicked()
     clearSlotsList();
     for (int i=0;i<Derm.size();i++)
     {
-        for (int j=0;j<Derm[i].days.size();j++)
+        for (int j=0;j<Derm[i]->days.size();j++)
         {
-            addSlotToList(Derm[i].username+" on "+Derm[i].days[j]+" from "+QString::number(Derm[i].starttime)+" to "+QString::number(Derm[i].endtime));
+            addSlotToList(Derm[i]->username+" on "+Derm[i]->days[j]+" from "+QString::number(Derm[i]->starttime)+" to "+QString::number(Derm[i]->endtime));
         }
     }
 }

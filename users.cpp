@@ -19,11 +19,11 @@ QVector<drclass> doctors={drclass("Ayman","aaaa","Nutrition","male",50,14,20,{"S
 QVector<nurse> nurses={nurse("Suzi","szsz","female",20,12,23,{"Sunday","Thurseday"}),
                          nurse("Amgad","amam","male",23,10,18,{"Tuesday"}),
                          nurse("Hania","hanh","female",28,1,12,{"Tuesday"})};
-QVector<drclass> Nutrition;
-QVector<drclass> OG;
-QVector<drclass> IM;
-QVector<drclass>Derm;
-QVector<drclass> oph;
+QVector<drclass*> Nutrition;
+QVector<drclass*> OG;
+QVector<drclass*> IM;
+QVector<drclass*>Derm;
+QVector<drclass*> oph;
 
 users::users() {}
 //QString n, QString p, QString s , QString g, int a,int st,int e,QVector<QString> d
