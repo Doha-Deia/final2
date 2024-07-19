@@ -19,6 +19,7 @@ scheduleedit::scheduleedit(QWidget *parent, QString drname)
     this->setPalette(palette);
 
     ui->label_error->setVisible (false);
+    ui->plainTextEdit->setVisible(false);
     for (int i=0;i<doctors.size();i++)
     {
         if (doctors[i].username==drname){
@@ -33,6 +34,11 @@ scheduleedit::scheduleedit(QWidget *parent, QString drname)
             n=&nurses[i];
             drornurse = 2;
             break;
+        }
+    }
+    if (drornurse==1){
+        if (!d->dpatients.empty()){
+            ui->plainTextEdit->setVisible(true);
         }
     }
 }

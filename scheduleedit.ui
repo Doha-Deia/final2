@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>300</height>
+    <height>367</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>70</x>
-     <y>240</y>
+     <y>300</y>
      <width>261</width>
      <height>21</height>
     </rect>
@@ -36,7 +36,7 @@
    <property name="geometry">
     <rect>
      <x>150</x>
-     <y>260</y>
+     <y>320</y>
      <width>100</width>
      <height>29</height>
     </rect>
@@ -55,10 +55,10 @@
   <widget class="QGroupBox" name="Groupbox_time">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>150</y>
+     <x>70</x>
+     <y>220</y>
      <width>261</width>
-     <height>81</height>
+     <height>71</height>
     </rect>
    </property>
    <property name="font">
@@ -132,8 +132,8 @@
   <widget class="QGroupBox" name="days">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>10</y>
+     <x>70</x>
+     <y>100</y>
      <width>221</width>
      <height>111</height>
     </rect>
@@ -225,6 +225,19 @@
      <string>Monday</string>
     </property>
    </widget>
+  </widget>
+  <widget class="QPlainTextEdit" name="plainTextEdit">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>361</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="plainText">
+    <string>*Note: when you change your schedule, you have to follow your old scedule as well because there are some old reservations. After finishing these reservations, you can follow your new scedule only.</string>
+   </property>
   </widget>
  </widget>
  <resources/>
