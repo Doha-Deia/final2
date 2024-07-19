@@ -39,6 +39,16 @@ void registering::on_register_2_clicked()
         if (name==admins[i].username)
             ui->errorname->setVisible(true);
     }
+    for (int i=0;i<doctors.size();i++)
+    {
+        if (name==doctors[i].username)
+            ui->errorname->setVisible(true);
+    }
+    for (int i=0;i<nurses.size();i++)
+    {
+        if (name==nurses[i].username)
+            ui->errorname->setVisible(true);
+    }
 
     int age=0;
     if (ui->ageedit->text()!="")
