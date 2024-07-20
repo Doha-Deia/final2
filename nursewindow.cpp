@@ -23,7 +23,7 @@ nursewindow::nursewindow(QWidget *parent,QString n)
             break;
         }
     }
-    ui->label_Hellonur->setText("Hello Dr. "+ nur->username);
+    ui->label_Hellonur->setText("Hello nurse. "+ nur->username);
     QPixmap backgroundImage(":/Images/download.jpg");
 
     // Set the background image

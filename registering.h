@@ -22,6 +22,10 @@ private slots:
 
     void on_nurse_clicked();
 
+    void on_admin_clicked();
+
+    void on_patient_clicked();
+
 private:
     Ui::registering *ui;
 };

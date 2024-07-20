@@ -235,8 +235,15 @@
      <height>71</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="plainText">
-    <string>*Note: when you change your schedule, you have to follow your old scedule as well because there are some old reservations. After finishing these reservations, you can follow your new scedule only.</string>
+    <string>*Note: when you change your schedule, you must follow your old schedule, as well because there are some old reservations. After finishing these reservations, you can follow your new schedule only.</string>
    </property>
   </widget>
  </widget>

@@ -16,6 +16,14 @@ registering::registering(QWidget *parent)
     ui->groupBox_speciality->setVisible(false);
     ui->time->setVisible(false);
     ui->days->setVisible(false);
+
+    QPixmap backgroundImage(":/Images/download.jpg");
+
+    // Set the background image
+    QBrush backgroundBrush(backgroundImage);
+    QPalette palette = this->palette();
+    palette.setBrush(QPalette::Window, backgroundBrush);
+    this->setPalette(palette);
 }
 
 registering::~registering()
@@ -186,6 +194,23 @@ void registering::on_nurse_clicked()
 {
     ui->days->setVisible(true);
     ui->time->setVisible(true);
+    ui->groupBox_speciality->setVisible(false);
 
+}
+
+
+void registering::on_admin_clicked()
+{
+    ui->groupBox_speciality->setVisible(false);
+    ui->time->setVisible(false);
+    ui->days->setVisible(false);
+}
+
+
+void registering::on_patient_clicked()
+{
+    ui->groupBox_speciality->setVisible(false);
+    ui->time->setVisible(false);
+    ui->days->setVisible(false);
 }
 
