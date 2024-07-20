@@ -164,7 +164,7 @@ void PatientManagmentWindow::on_pushButtonSubmit_clicked()
             currentPatient->appointments.remove(selectedItem.section(" - ", 0, 0)); // Remove slot from appointments map
             //currentPatient.appointments.remove(selectedItem);
             ui->comboBoxCancel->removeItem(currentIndex); // Remove item from ComboBox#
-
+            ui->comboBoxReschedule->removeItem(currentIndex);
         }
         ui->comboBoxCancel->setVisible(false);
         ui->pushButtonSubmit->setVisible(false);
@@ -177,15 +177,16 @@ void PatientManagmentWindow::on_pushButtonSubmit_clicked()
             QString selectedItem = ui->comboBoxReschedule->itemText(currentIndex);
             currentPatient->appointments.remove(selectedItem.section(" - ", 0, 0)); // Remove slot from appointments map
             //currentPatient.appointments.removeOne(selectedItem);
-            ui->comboBoxReschedule->removeItem(currentIndex); // Remove item from ComboBox
+            ui->comboBoxReschedule->removeItem(currentIndex);
+            ui->comboBoxCancel->removeItem(currentIndex);
             BookAppointmentWindow* app = new BookAppointmentWindow(this,currentPatient->username);
             hide();
             app->show();
 
         }
     }
-      ui->pushButtonCancel->setEnabled(true);
-       ui->comboBoxReschedule->setVisible(false);
+    ui->pushButtonCancel->setEnabled(true);
+    ui->comboBoxReschedule->setVisible(false);
 
 }
 

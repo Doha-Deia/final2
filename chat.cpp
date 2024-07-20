@@ -13,6 +13,7 @@ chat::chat(QWidget *parent)
     QPalette palette = this->palette();
     palette.setBrush(QPalette::Window, backgroundBrush);
     this->setPalette(palette);
+    ui->labelsubmitclicked->setVisible(false);
 }
 
 chat::~chat()
@@ -23,7 +24,8 @@ chat::~chat()
 void chat::on_pushButtonsubmit_clicked()
 {
     ui->plainTextEdit_Chat->setPlainText("");
-    ui->labelsubmitclicked->setText("<font color='blue'>Your message is sent to the Admin. Expect a call very soon</font>");
+    ui->labelsubmitclicked->setVisible(true);
+    //ui->labelsubmitclicked->setText("<font color='blue'>Your message is sent. Expect a call very soon</font>");
 
 }
 
